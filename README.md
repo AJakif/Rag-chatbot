@@ -62,6 +62,27 @@ This project is more than just a practice repo — it is structured like a **rea
 
 ---
 
+## 💡 Use Cases
+
+This RAG system can power real-world applications such as:
+- 🧑‍💻 **AI Assistants & Chatbots** – contextual Q&A over documents, manuals, or websites.  
+- 🏢 **Enterprise Knowledge Search** – query across internal PDFs, reports, and knowledge bases.  
+- 📊 **Data Insights** – extract and summarize information from large unstructured datasets.  
+- 📚 **Education & Research** – assist students/researchers with quick access to knowledge.  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Backend Framework:** FastAPI  
+- **Vector Database:** Qdrant  
+- **Orchestration & Pipelines:** LangChain (future: LangGraph)  
+- **LLMs:** OpenAI, Google Gemini, Ollama (local)  
+- **Deployment:** Docker (local + cloud ready)  
+- **Others:** Async I/O, modular architecture, clean code practices  
+
+---
+
 ## 🗂 Project Structure
 ```text
 apps/         → FastAPI service, routers, workers, (optional UI)  
@@ -223,7 +244,7 @@ rag-chatbot/
 1. Clone and Setup
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/rag-chatbot.git
+git clone https://github.com/AJakif/rag-chatbot.git
 cd rag-chatbot
 
 # Create a virtual environment
@@ -244,6 +265,10 @@ Copy `.env.example` → `.env` and set values.
 ```bash
 cp configs/.env.example .env
 ```
+⚠️ Never commit your `.env` file.
+Only `.env.example` should be tracked.
+
+
 3. Run Qdrant + API
 ```bash
 docker-compose -f docker/docker-compose.dev.yml up
