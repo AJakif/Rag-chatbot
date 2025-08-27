@@ -1,0 +1,1 @@
+# Orchestrates loaders→clean→split→embed→upsert

@@ -1,0 +1,52 @@
+# ========== Python ==========
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+*.manifest
+*.spec
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+pip-wheel-metadata/
+
+# ========== Project Secrets ==========
+.env
+.env.*
+!.env.example    # keep env.example
+
+# ========== Version Control ==========
+.git/
+.gitignore
+.gitattributes
+
+# ========== Docker ==========
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# ========== System / IDE ==========
+.vscode/
+.idea/
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# ========== Logs ==========
+*.log
+logs/
+tmp/
+
+# ========== Tests / Cache ==========
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.nox/
