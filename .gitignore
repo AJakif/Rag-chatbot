@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+.Python
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+*.env
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build / Dist
+build/
+dist/
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.cache
+*.coverage
+.coverage.*
+coverage.xml
+*.prof
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# Data (local only, not pushed to git)
+data/sources/
+data/staging/
+data/outputs/
+
+# Docker / Compose
+docker/*.env
+*.pid
+
+# Qdrant volumes (local dev)
+qdrant_storage/
+qdrant_data/
+
+# LangSmith / LangChain local traces
+.langchain/
+.langsmith/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# commitizen
+/cz.yaml
+/cz.toml
+/cz.json

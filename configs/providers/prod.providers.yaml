@@ -1,0 +1,15 @@
+llm:
+  primary: openai
+  fallback: google
+  local_on_failure: true
+  openai:
+    model: "gpt-4o-mini"
+  google:
+    model: "gemini-1.5-pro"
+  local:
+    model: "llama3.1:8b"
+    
+embeddings:
+  primary: hf_local
+  hf_local:
+    model: "intfloat/e5-base-v2"
