@@ -1,46 +1,31 @@
-[tool.poetry]
-name = "rag-mvp"
+[project]
+name = "rag-chatbot"
 version = "0.1.0"
-description = "Production-ready RAG MVP with LangChain + Qdrant"
-authors = ["Your Name <you@example.com>"]
-readme = "README.md"
-packages = [{ include = "core" }, { include = "apps" }]
+dependencies = [
+    "fastapi>=0.104.1",
+    "uvicorn>=0.24.0",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "python-dotenv>=1.0.0",
+]
 
-[tool.poetry.dependencies]
-python = "^3.11"
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "httpx>=0.24.0"
+]
 
-# LangChain ecosystem
-langchain = "^0.3.0"
-langchain-community = "^0.3.0"
-langchain-openai = "^0.2.0"
-langchain-google-genai = "^1.0.4"
-langchain-text-splitters = "^0.3.0"
+[build-system]
+requires = ["setuptools>=65.5.0", "wheel"]
+build-backend = "setuptools.build_meta"
 
-# Vector DB
-qdrant-client = "^1.9.0"
+[tool.setuptools]
+packages = {find = {where = ["."], include = ["apps*", "core*"]}}
 
-# Embeddings
-sentence-transformers = "^3.0.0"
+[tool.setuptools.package-dir]
+apps = "apps"
+core = "core"
 
-# API
-fastapi = "^0.111.0"
-uvicorn = "^0.30.0"
-
-# Infra/utils
-pydantic = "^2.8.0"
-python-dotenv = "^1.0.1"
-loguru = "^0.7.2"
-structlog = "^24.2.0"
-
-# For loaders
-pymupdf = "^1.24.0"         # PDF
-lxml = "^5.2.1"             # XML
-requests = "^2.32.0"
-
-# Optional: tracing & eval
-langsmith = "^0.1.46"
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.2.0"
-black = "^24.3.0"
-ruff = "^0.5.0"
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"

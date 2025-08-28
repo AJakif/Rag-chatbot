@@ -1,0 +1,14 @@
+app:
+  name: rag-chatbot
+  version: 0.1.0
+  environment: development
+
+qdrant:
+  host: localhost
+  port: 6333
+  collection_name: rag_documents
+  timeout: 30
+
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(filename)s:%(lineno)d - %(funcName)s() - %(message)s"
