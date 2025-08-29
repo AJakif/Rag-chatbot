@@ -206,11 +206,11 @@ MIT License — free to use, modify, and share.
 ## 🙌 Acknowledgements
 * Mentor [Jasim Uddin dipu](https://www.linkedin.com/in/jasim-uddin-dipu-011663102/)
 
-* LangChain [link](https://www.langchain.com/)
-* Qdrant [link](https://qdrant.tech/)
-* LangSmith [link](https://smith.langchain.com/)
-* LangGraph [link](https://www.langchain.com/langgraph)
-* Ollama [link](https://ollama.ai/)
+* [LangChain](https://www.langchain.com/)
+* [Qdrant](https://qdrant.tech/)
+* [LangSmith](https://smith.langchain.com/)
+* [LangGraph](https://www.langchain.com/langgraph)
+* [Ollama](https://ollama.ai/)
 
 ---
 
