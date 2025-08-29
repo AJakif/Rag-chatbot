@@ -68,3 +68,6 @@ Thumbs.db
 /cz.yaml
 /cz.toml
 /cz.json
+
+# logs
+logs/
