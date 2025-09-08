@@ -1,4 +1,4 @@
-.PHONY: test install-dev
+.PHONY: test install-dev logs clean-logs
 
 install-dev:
 	pip install -e ".[test]"
@@ -8,3 +8,9 @@ test:
 
 run:
 	uvicorn apps.api.main:app --reload --host 0.0.0.0 --port 8000
+
+logs:
+	python scripts/log_tail.py
+
+clean-logs:
+	rm -rf logs/*.log

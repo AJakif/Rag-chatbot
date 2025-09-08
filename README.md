@@ -134,22 +134,23 @@ Only `.env.example` should be tracked.
 
 3. Run Tests
 ```bash
-# Install test dependencies
-pip install pytest httpx
-
-# Run tests
-python -m pytest tests/unit/test_health.py -v
+make test
 ```
 
 4. Start the API
 ```bash
-uvicorn apps.api.main:app --reload --host 0.0.0.0 --port 8000
+make run
 ```
 
 5. Test the API
 ```bash
 curl http://localhost:8000/api/v1/health
 curl http://localhost:8000/
+```
+
+6. View Logs
+```bash
+make logs
 ```
 ---
 
@@ -165,10 +166,15 @@ Important ones:
 ---
 
 ## 📊 Roadmap
-* [ ] Project scaffolding (FastAPI + LangChain + Qdrant)
+* [x] Project scaffolding FastAPI
+* [x] Configuration management with Pydantic Settings
+* [x] Environment variable support
+* [x] Structured logging with rotation
+* [x] Health check endpoint
+* [x] Test infrastructure
 * [ ] Multi-provider LLM support (OpenAI, Google, Local/Ollama)
 * [ ] Qdrant vector database integration
-* [ ] Ingestion pipeline (PDF/JSON/XML/Text/API)
+* [ ] Document ingestion pipeline (PDF, JSON, XML, Text, API)
 * [ ] RAG chain implementation
 * [ ] LangGraph integration
 * [ ] LangSmith observability
@@ -176,6 +182,7 @@ Important ones:
 * [ ] Evaluation scripts with sample datasets
 
 ---
+
 
 ## 🤝 Contributing
 
@@ -199,12 +206,12 @@ MIT License — free to use, modify, and share.
 ## 🙌 Acknowledgements
 * Mentor [Jasim Uddin dipu](https://www.linkedin.com/in/jasim-uddin-dipu-011663102/)
 
-* LangChain [link](https://www.langchain.com/)
-* Qdrant [link](https://qdrant.tech/)
-* LangSmith [link](https://smith.langchain.com/)
-* LangGraph [link](https://www.langchain.com/langgraph)
-* Ollama [link](https://ollama.ai/)
+* [LangChain](https://www.langchain.com/)
+* [Qdrant](https://qdrant.tech/)
+* [LangSmith](https://smith.langchain.com/)
+* [LangGraph](https://www.langchain.com/langgraph)
+* [Ollama](https://ollama.ai/)
 
 ---
 
-This README will be updated as the project progresses. Currently in Task 1: Project Setup and Configuration.
+This README will be updated as the project progresses.

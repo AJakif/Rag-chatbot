@@ -40,6 +40,15 @@ class AppSettings(BaseSettings):
     embedding_model: str = Field(default="text-embedding-3-large")
     top_k: int = Field(default=5)
     
+    # Logging settings
+    log_path: str = Field(default="./logs")
+    log_rotation: str = Field(default="D")
+    log_retention: int = Field(default=7)
+    log_format: str = Field(
+        default="%(asctime)s - %(name)s - %(levelname)s - %(filename)s:%(lineno)d - %(funcName)s() - %(message)s"
+    )
+    log_date_format: str = Field(default="%d-%m-%Y %H:%M:%S")
+    
     # Computed properties
     @property
     def qdrant_url(self) -> str:
@@ -47,8 +56,8 @@ class AppSettings(BaseSettings):
     
     @field_validator('app_env')
     def validate_app_env(cls, v):
-        if v not in ['development', 'production']:
-            raise ValueError('APP_ENV must be development or production')
+        if v not in ['development', 'production', 'test']:
+            raise ValueError('APP_ENV must be development, production, or test')
         return v
     
     model_config = ConfigDict(
@@ -80,6 +89,11 @@ class AppSettings(BaseSettings):
             "max_chunk_size": "MAX_CHUNK_SIZE",
             "embedding_model": "EMBEDDING_MODEL",
             "top_k": "TOP_K",
+            "log_path": "LOG_PATH",
+            "log_rotation": "LOG_ROTATION",
+            "log_retention": "LOG_RETENTION",
+            "log_format": "LOG_FORMAT",
+            "log_date_format": "LOG_DATE_FORMAT",
         }
     )
 
