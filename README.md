@@ -6,7 +6,7 @@
 ## 🔎 About
 
 This repository is a **production-ready MVP** implementation of a Retrieval-Augmented Generation (RAG) system.  
-It is designed as a **practice and learning project**, but follows real-world engineering principles so it can be extended for production use.
+It follows real-world engineering principles (modular ingestion, pluggable LLMs, a clean API layer, Docker) so it can be taken to production.
 
 The goal of this project is to explore **AI, Machine Learning, and scalable system design** while building a modular and extensible RAG pipeline.  
 It demonstrates how to ingest, process, and query unstructured data (PDF, JSON, XML, Text, and API data) with **LangChain**, store embeddings in **Qdrant**, and use different **LLMs (OpenAI, Google, Local models)** for retrieval-based question answering.
@@ -25,7 +25,7 @@ This repository is open-source and meant to be a **learning-friendly but industr
 
 ## 🚀 Features
 
-This project is more than just a practice repo — it is structured like a **real-world RAG system**.  
+It is structured like a **real-world RAG system**.  
 
 ### 🔹 Data Ingestion
 - Handles **multiple data formats**: PDF, JSON, XML, plain text, and APIs.  
@@ -319,7 +319,7 @@ python scripts/query_cli.py "What are the main points in the PDF?"
 
 ## 🤝 Contributing
 
-This is a practice repo — contributions are welcome if you’re experimenting with RAG, LLMs, or scaling strategies.
+Contributions are welcome, especially if you’re experimenting with RAG, LLMs, or scaling strategies.
 Feel free to fork, PR, or open issues with ideas, bugs, or learning notes.
 
 1. Fork the repo
